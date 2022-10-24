@@ -40,3 +40,5 @@ document.addEventListener('DOMContentLoaded', e => {
         ticketsUI.renderTickets(locations.lastSearch)
     }
 })
+
+

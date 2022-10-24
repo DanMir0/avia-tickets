@@ -11,6 +11,8 @@ class Locations {
     this.lastSearch = {};
     this.airlines = {};
     this.formatDate = helpers.formatDate;
+    this.favoriteTickets = []
+    this.ticketIndex = 0
   }
   async init() {
     const response = await Promise.all([
@@ -26,6 +28,10 @@ class Locations {
     this.airlines = this.serializeAirlines(airlines);
 
     return response;
+  }
+
+  nextIndex() {
+    return this.ticketIndex += 1
   }
 
   getCityCodeByKey(key) {
@@ -97,10 +103,22 @@ class Locations {
     this.lastSearch = this.serializeTickets(response.data);
   }
 
+  addToFavorite(id) {
+    let ticket =  this.lastSearch[id]
+    this.favoriteTickets.push(ticket) 
+  }
+  
+  delelteToFavorite(id) {
+    this.favoriteTickets = this.favoriteTickets.filter(ticket => {
+      return ticket.id != id
+    })
+  }
+
   serializeTickets(tickets) {
     return Object.values(tickets).map((ticket) => {
       return {
         ...ticket,
+        id: this.nextIndex(),
         origin_name: this.getCityNameByCode(ticket.origin),
         destination_name: this.getCityNameByCode(ticket.destination),
         airline_logo: this.getAirlineLogoByCode(ticket.airline),
