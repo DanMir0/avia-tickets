@@ -8,28 +8,39 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-
     <title>Document</title>
   <link href="./style.css" rel="stylesheet"></head>
   <body>
-    <!-- <nav class="header purple darken-1">
+    <nav class="header purple darken-1">
       <div class="nav-wrapper">
-        <div class="container d-flex align-items-center">
+        <div class="container-fluid d-flex align-items-center">
           <div class="logo d-flex align-items-center">
             <i class="large material-icons">flight_takeoff</i>
-            <a href="#" class="brand-logo">Avia Tickets</a>
+            <a href="#" class="brand-logo">Avia tickets</a>
           </div>
-          <ul id="nav-mobile" class="right hide-on-med-and-down ml-auto">
-            <li>
-              <div class="input-field currency-select">
-                <select id="currency">
-                  <option value="USD">$ US Dollar</option>
-                  <option value="EUR">€ Euro</option>
-                </select>
+          <div class="favorites">
+            <!-- Dropdown Trigger -->
+            <a
+              class="dropdown-trigger btn purple lighten-5 black-text"
+              href="#"
+              data-target="dropdown1"
+              >Favorites</a
+            >
+            <!-- Dropdown Structure -->
+            <div id="dropdown1" class="dropdown-content d-flex flex-column ">
+              
               </div>
-            </li>
-          </ul>
         </div>
+        <ul  class="right  ml-auto">
+          <li>
+            <div class="input-field currency-select">
+              <select id="currency">
+                <option value="USD">$ US Dollar</option>
+                <option value="EUR">€ Euro</option>
+              </select>
+            </div>
+          </li>
+        </ul>
       </div>
     </nav>
     <div class="form-section">
@@ -100,42 +111,9 @@
     <div class="tickets-sections">
       <div class="container">
         <div class="row">
-          <div class="tickets-empty-res-msg">
-            По вашему запросу билетов не найдено.
-          </div>
-          <div class="col s12 m6">
-            <div class="card ticket-card">
-              <div class="ticket-airline d-flex align-items-center">
-                <img
-                  src="http://pics.avs.io/200/200/PS.png"
-                  class="ticket-airline-img"
-                />
-                <span class="ticket-airline-name"
-                  >Ukraine International airlines</span
-                >
-              </div>
-              <div class="ticket-destination d-flex align-items-center">
-                <div class="d-flex align-items-center mr-auto">
-                  <span class="ticket-city">Харьков </span>
-                  <i class="medium material-icons">flight_takeoff</i>
-                </div>
-                <div class="d-flex align-items-center">
-                  <i class="medium material-icons">flight_land</i>
-                  <span class="ticket-city">Львов</span>
-                </div>
-              </div>
-              <div class="ticket-time-price d-flex align-items-center">
-                <span class="ticket-time-departure">14 Sep 2019 02:30</span>
-                <span class="ticket-price ml-auto">$315</span>
-              </div>
-              <div class="ticket-additional-info">
-                <span class="ticket-transfers">Пересадок: 1</span>
-                <span class="ticket-flight-number">Номер рейса: 26</span>
-              </div>
-            </div>
-          </div>
+        
         </div>
       </div>
-    </div> -->
-  <script type="text/javascript" src="polyfill.27aeef1914828819fb4a.js"></script><script type="text/javascript" src="app.27aeef1914828819fb4a.js"></script></body>
+    </div>
+  <script type="text/javascript" src="polyfill.21f67dffa2bf6ef63cf8.js"></script><script type="text/javascript" src="app.21f67dffa2bf6ef63cf8.js"></script></body>
 </html>
